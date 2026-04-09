@@ -83,14 +83,6 @@ const IndustriesServed: React.FC = () => {
                        <p className="text-xs md:text-sm text-white/90 leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-700 delay-100 font-light pt-1">
                           {cat.description}
                        </p>
-                       
-                       {/* Subtle CTA Indicator */}
-                       <div className="pt-3 opacity-0 group-hover:opacity-100 transition-all duration-700 delay-200">
-                          <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-brand-silver">
-                            <span>Learn More</span>
-                            <div className="w-8 h-px bg-brand-silver/40 group-hover:w-12 transition-all duration-500"></div>
-                          </div>
-                       </div>
                      </div>
                    </div>
                 </div>
