@@ -1,0 +1,98 @@
+import React from 'react';
+import { Section } from '../types';
+
+const IndustriesServed: React.FC = () => {
+  const categories = [
+    {
+      category: "3PL & Asset-Based",
+      description: "Sourcing high-performance Sales and Operations leadership for asset and non-asset providers. We specialize in identifying the strategic talent that drives revenue growth and operational efficiency in the competitive North American transportation market.",
+      image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&q=80&w=1000"
+    },
+    {
+      category: "Freight Forwarding",
+      description: "Connecting global forwarding leaders with top-tier employers. From Air and Ocean Directors to Branch Managers, we source experts with the international trade knowledge and operational depth to manage complex global logistics networks.",
+      image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=1000"
+    },
+    {
+      category: "Customs & Compliance",
+      description: "Specialized recruitment for customs brokerage and trade compliance leadership. We identify the regulatory experts who ensure seamless cross-border operations and mitigate risk in an increasingly complex global trade environment.",
+      image: "https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&q=80&w=1000"
+    },
+    {
+      category: "Executive Leadership",
+      description: "Strategic search for C-suite and VP-level talent in the transportation industry. We deliver the visionary leaders who define corporate strategy, drive digital transformation, and lead organizations through growth and change.",
+      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000"
+    }
+  ];
+
+  return (
+    <section id={Section.INDUSTRIES} className="relative py-36 bg-brand-dark overflow-hidden font-sans">
+      
+      {/* Cinematic Background Grid Overlay */}
+      <div 
+        className="absolute inset-0 opacity-[0.05] pointer-events-none z-0"
+        style={{
+          backgroundImage: `linear-gradient(to right, #444 1px, transparent 1px), 
+                            linear-gradient(to bottom, #444 1px, transparent 1px)`,
+          backgroundSize: '4rem 4rem'
+        }}
+      ></div>
+
+      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+        
+        {/* Header - Minimal & Sharp */}
+        <div className="mb-12 md:mb-20">
+           <h2 className="text-4xl md:text-7xl font-medium text-white tracking-tighter">
+             Supply Chain <span className="text-white italic font-serif font-light">Sectors</span>
+           </h2>
+        </div>
+
+        {/* Refined Grid Layout - 4 Columns on desktop for better density */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {categories.map((cat, idx) => (
+            <div 
+              key={idx} 
+              className="group relative aspect-[2/3] overflow-hidden bg-[#151619] border border-white/5 rounded-xl transition-all duration-500 hover:border-brand-silver/40 flex flex-col shadow-elegant"
+            >
+              {/* Background Image with vibrant color reveal */}
+              <div className="absolute inset-0 z-0">
+                <img 
+                  src={cat.image} 
+                  alt={`${cat.category} Recruitment Services - Certus Supply Chain Search`}
+                  loading="lazy"
+                  className="w-full h-full object-cover opacity-30 grayscale group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-1000 ease-out"
+                />
+                {/* Gradient Overlay - Dramatic reveal with legibility protection */}
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-transparent transition-all duration-700 group-hover:from-brand-dark group-hover:via-brand-dark/80 group-hover:to-brand-dark/20"></div>
+              </div>
+
+              {/* Corner Accent */}
+              <div className="absolute top-6 right-6 w-4 h-4 border-t border-r border-white/10 group-hover:border-brand-silver/40 transition-all z-20"></div>
+
+              {/* Content Area */}
+              <div className="relative z-20 p-5 md:p-6 flex flex-col h-full justify-start">
+                
+                {/* Title & Description */}
+                <div className="space-y-3 transform transition-all duration-500 group-hover:translate-y-1">
+                   <h3 className="text-base md:text-lg font-bold text-white leading-tight tracking-tight drop-shadow-2xl">
+                      {cat.category}
+                   </h3>
+                   <p className="text-xs text-white/80 leading-relaxed opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500 delay-100 drop-shadow-lg font-light">
+                      {cat.description}
+                   </p>
+                </div>
+
+              </div>
+
+              {/* Subtle Glow Sweep */}
+              <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-gradient-to-tr from-brand-silver/10 via-transparent to-white/5"></div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </section>
+  );
+};
+
+export default IndustriesServed;
