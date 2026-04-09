@@ -21,13 +21,13 @@ const SplitGateway: React.FC<SplitGatewayProps> = ({ onSelect, onViewJobs, onNav
   const silverText = 'text-white'; 
 
   const videos = {
-    'skilled-trades': "https://res.cloudinary.com/dvbubqhpp/video/upload/v1774975858/13076629_3840_2160_60fps_nmqkal.mp4",
-    'sectors': "https://res.cloudinary.com/dvbubqhpp/video/upload/v1774983483/13742716-uhd_3840_2160_24fps_jbfdds.mp4"
+    'skilled-trades': "https://res.cloudinary.com/dvbubqhpp/video/upload/q_auto,f_auto,w_1280/v1774975858/13076629_3840_2160_60fps_nmqkal.mp4",
+    'sectors': "https://res.cloudinary.com/dvbubqhpp/video/upload/q_auto,f_auto,w_1280/v1774983483/13742716-uhd_3840_2160_24fps_jbfdds.mp4"
   };
 
   const posters = {
-    'skilled-trades': "https://res.cloudinary.com/dvbubqhpp/video/upload/so_0,w_1080,q_auto,f_auto/v1774975858/13076629_3840_2160_60fps_nmqkal.jpg",
-    'sectors': "https://res.cloudinary.com/dvbubqhpp/video/upload/so_0,w_1080,q_auto,f_auto/v1774983483/13742716-uhd_3840_2160_24fps_jbfdds.jpg"
+    'skilled-trades': "https://res.cloudinary.com/dvbubqhpp/video/upload/so_0,w_1280,q_auto,f_auto/v1774975858/13076629_3840_2160_60fps_nmqkal.jpg",
+    'sectors': "https://res.cloudinary.com/dvbubqhpp/video/upload/so_0,w_1280,q_auto,f_auto/v1774983483/13742716-uhd_3840_2160_24fps_jbfdds.jpg"
   };
 
   useEffect(() => {
